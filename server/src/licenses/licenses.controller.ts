@@ -67,12 +67,12 @@ type SortBy = '+id' | '-id' | '+assignedTo' | '-assignedTo' | '+product' | '-pro
 const sortByFn = (data: LicensesDto[], sortBy: SortBy) => {
   if (sortBy === '+id') return data.sort((a, b) => a.id.localeCompare(b.id));
   if (sortBy === '-id') return data.sort((a, b) => b.id.localeCompare(a.id));
-  if (sortBy === '+assignedTo') return data.sort((a, b) => a.assignedTo.localeCompare(b.assignedTo));
-  if (sortBy === '-assignedTo') return data.sort((a, b) => b.assignedTo.localeCompare(a.assignedTo));
+  if (sortBy === '+assignedTo') return data.sort((a, b) => a.assignedTo?.localeCompare(b.assignedTo));
+  if (sortBy === '-assignedTo') return data.sort((a, b) => b.assignedTo?.localeCompare(a.assignedTo));
   if (sortBy === '+product') return data.sort((a, b) => a.product.localeCompare(b.product));
   if (sortBy === '-product') return data.sort((a, b) => b.product.localeCompare(a.product));
-  if (sortBy === '+lastSeen') return data.sort((a, b) => a.lastSeen.localeCompare(b.lastSeen));
-  if (sortBy === '-lastSeen') return data.sort((a, b) => b.lastSeen.localeCompare(a.lastSeen));
+  if (sortBy === '+lastSeen') return data.sort((a, b) => a.lastSeen?.localeCompare(b.lastSeen));
+  if (sortBy === '-lastSeen') return data.sort((a, b) => b.lastSeen?.localeCompare(a.lastSeen));
 };
 
 @ApiTags('licenses')

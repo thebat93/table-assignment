@@ -6,7 +6,7 @@ import * as crypto from 'crypto';
 import { z, ZodSchema } from 'zod';
 import { parseISO } from 'date-fns';
 
-const randomNumber = (max: number) => Math.floor(Math.random() * max);
+const randomNumber = (max: number) => Math.floor(Math.random() * max) + 1;
 
 const randomDate = () => {
   if (randomNumber(3) === 3) return undefined;
@@ -27,9 +27,9 @@ const generateRandomLicenses = (n: number) => {
     return randomId();
   };
   const randomProduct = {
-    0: Product.Idea,
-    1: Product.PyCharm,
-    2: Product.WebStorm,
+    1: Product.Idea,
+    2: Product.PyCharm,
+    3: Product.WebStorm,
   };
   return Array(n)
     .fill(0)
@@ -135,7 +135,7 @@ export class LicensesController {
       ids,
       assignTo,
     });
-    if (randomNumber(10) === 9) throw new HttpException('Server error', HttpStatus.INTERNAL_SERVER_ERROR);
+    if (randomNumber(10) === 10) throw new HttpException('Server error', HttpStatus.INTERNAL_SERVER_ERROR);
     ids.forEach((e) => {
       const found = this.licenses.find((l) => l.id === e);
       if (found) {

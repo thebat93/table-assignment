@@ -1,0 +1,38 @@
+.header-cell {
+  flex: 1 1 0;
+  justify-content: center;
+  min-width: 0;
+}
+
+.label {
+  color: var(--color-grey-500);
+}
+
+.label:hover {
+  cursor: pointer;
+}
+
+.label.sorting {
+  text-decoration: underline;
+  cursor: default;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-grey-500);
+  padding: 0 4px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.handle-icon:hover {
+  cursor: grab;
+}
+
+.sort-icon {
+  transform: rotate(90deg);
+}

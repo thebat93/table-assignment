@@ -24,14 +24,14 @@ const useColumnsOrder = <K extends string>({
   }, [currentOrder, setPersistedColumnsOrder]);
 
   const changeOrder = useCallback(
-    (operation: ChangeOrderOperation) => (keyToAdd: K) => {
+    (operation: ChangeOrderOperation) => (changingKey: K) => {
       setCurrentOrder((columnsOrder) => {
         const newColumnsOrder: K[] = [];
 
         for (const defaultOrderKey of defaultOrder) {
-          if (defaultOrderKey === keyToAdd) {
+          if (defaultOrderKey === changingKey) {
             if (operation === CHANGE_ORDER_OPERATIONS.ADD) {
-              newColumnsOrder.push(keyToAdd);
+              newColumnsOrder.push(changingKey);
             }
             continue;
           }

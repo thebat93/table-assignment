@@ -42,8 +42,8 @@ const usePagination = ({
     setPageSize,
     total,
     setTotal,
-    isPreviousActive: page > 1,
-    isNextActive: page * pageSize < total,
+    isPreviousActive: total > 0 && page > 1,
+    isNextActive: total > 0 && page * pageSize < total,
   };
 };
 

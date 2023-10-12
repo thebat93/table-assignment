@@ -1,0 +1,49 @@
+.wrapper {
+  margin-top: 32px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+}
+
+.search-filter {
+  flex-grow: 1;
+}
+
+.date-filters {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.table-toolbar {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.table {
+  margin-top: 16px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.assign-licenses-button {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.assign-licenses-button:disabled {
+  background: var(--color-grey-500);
+  cursor: default;
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 8px
+}

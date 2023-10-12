@@ -1,0 +1,17 @@
+.title {
+  text-align: center;
+  font-weight: 500;
+}
+
+.name-field {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-footer {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+}

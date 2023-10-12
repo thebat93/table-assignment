@@ -1,0 +1,13 @@
+.dialog {
+  padding: 16px;
+  min-width: 500px;
+  border-radius: 16px;
+}
+
+.close-icon {
+  display: inline-flex;
+  cursor: pointer;
+  position: absolute;
+  left: 6px;
+  top: 6px;
+}

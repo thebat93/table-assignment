@@ -1,0 +1,33 @@
+.dropdown {
+  position: relative;
+  max-width: 320px;
+  display: inline-block;
+}
+
+.dropdown-button {
+  width: 100%;
+}
+
+.dropdown-button-content {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-grey-400);
+  padding: 8px;
+  min-width: 240px;
+}
+
+.dropdown-options.left-align {
+  left: 0;
+}
+
+.dropdown-options.right-align {
+  right: 0;
+}
